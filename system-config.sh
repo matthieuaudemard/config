@@ -13,6 +13,14 @@ omz update
 echo 'export HOMEBREW_NO_AUTO_UPDATE=1' >> ~/.zshrc  # disable brew formulas auto updates
 echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.zshrc
 
+# install git & edit gitconfig
+brew install git
+echo 'export PATH="/usr/local/opt/git/bin"' >> ~/.zshrc
+git config --global user.name "Matthieu Audemard"
+git config --global user.email "matthieu.audemard@gmail.com"
+git config --global core.editor vim
+git config --global credential.helper osxkeychain
+
 # add brew repos
 brew tap homebrew/cask-fonts
 
@@ -35,7 +43,7 @@ brew cask install \
     phpstorm \
 
 # atom configuration
-apm install dracula-ui dracula-syntax atom-beautify language-markdown
+apm install dracula-ui dracula-syntax atom-beautify
 
 # Security
 brew cask install \
@@ -53,17 +61,16 @@ brew cask install \
     transmission \
     font-inconsolata-for-powerline \
 
-# install vim
+# install & configure vim
 brew install vim
 echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
-
-# install git & edit gitconfig
-brew install git
-export PATH="/usr/local/opt/git/bin"
-git config --global user.name "Matthieu Audemard"
-git config --global user.email "matthieu.audemard@gmail.com"
-git config --global core.editor vim
-git config --global credential.helper osxkeychain
+git clone https://github.com/dracula/vim.git ~/git/dracula-vim
+mkdir -p ~/.vim/pack/themes/start
+ln -s ~/git/dracula-vim ~/.vim/pack/themes/start/dracula
+touch ~/.vimrc
+echo 'packadd! dracula' >> ~/.vimrc
+echo 'syntax enable' >> ~/.vimrc
+echo 'colorscheme dracula' >> ~/.vimrc
 
 
 # install & configure java11
