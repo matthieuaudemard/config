@@ -1,11 +1,19 @@
+# link for configuring zsh :
 # https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
 
 xcode-select —-install
 
 # install and configure hombebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.zshrc
 brew update
+
+# install & update zsh
+brew install zsh
+omz update
+echo 'export HOMEBREW_NO_AUTO_UPDATE=1' >> ~/.zshrc  # disable brew formulas auto updates
+echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.zshrc
+
+# add brew repos
 brew tap homebrew/cask-fonts
 
 # Web browsers
@@ -26,6 +34,9 @@ brew cask install \
     intellij-idea \
     phpstorm \
 
+# atom configuration
+apm install dracula-ui dracula-syntax atom-beautify language-markdown
+
 # Security
 brew cask install \
     1password \
@@ -41,10 +52,6 @@ brew cask install \
     steam \
     transmission \
     font-inconsolata-for-powerline \
-
-# install & update zsh
-brew install zsh
-omz update
 
 # install vim
 brew install vim
