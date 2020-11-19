@@ -23,6 +23,7 @@ git config --global credential.helper osxkeychain
 
 # add brew repos
 brew tap homebrew/cask-fonts
+brew tap mongodb/brew
 
 # Web browsers
 brew cask install \
@@ -41,6 +42,7 @@ brew cask install \
     jetbrains-toolbox \
     intellij-idea \
     phpstorm \
+    robo-3t
 
 # atom configuration
 apm install dracula-ui dracula-syntax atom-beautify
@@ -60,6 +62,7 @@ brew cask install \
     steam \
     transmission \
     font-inconsolata-for-powerline \
+    iina
 
 # install & configure vim
 brew install vim
@@ -87,6 +90,10 @@ pecl install xdebug
 # install & configure mysql@5.7
 brew install mysql@5.7
 echo 'export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"' >> ~/.zshrc
+
+# install mongodb
+brew install mongodb-community
+echo 'export PATH="/usr/local/Cellar/mongodb-community/4.4.1/bin:$PATH"' >> ~/.zshrc
 
 brew install \
     maven \
