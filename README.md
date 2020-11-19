@@ -22,6 +22,8 @@ just a bunch of scripts to automate new macos systems installations.
 - postman
 - steam
 - transmission
+- iina
+- robo-3t
 
 ## list of installed packages :
 - zsh
@@ -37,3 +39,4 @@ just a bunch of scripts to automate new macos systems installations.
 - youtube-dl
 - composer
 - angular-cli
+- mongodb-community
