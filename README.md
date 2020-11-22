@@ -24,6 +24,7 @@ just a bunch of scripts to automate new macos systems installations.
 - transmission
 - iina
 - robo-3t
+- notion
 
 ## list of installed packages :
 - zsh
