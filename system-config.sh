@@ -62,7 +62,8 @@ brew cask install \
     steam \
     transmission \
     font-inconsolata-for-powerline \
-    iina
+    iina \
+    notion
 
 # install & configure vim
 brew install vim
