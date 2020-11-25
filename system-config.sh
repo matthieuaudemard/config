@@ -99,7 +99,7 @@ echo 'export PATH="/usr/local/Cellar/mongodb-community/4.4.1/bin:$PATH"' >> ~/.z
 brew install \
     maven \
     ffmpeg \
-    python \
+    python@3.9 \
     youtube-dl \
     composer
 

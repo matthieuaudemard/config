@@ -35,7 +35,7 @@ just a bunch of scripts to automate new macos systems installations.
 - mysql5.7
 - maven
 - ffmpeg
-- python3.x
+- python@3.9
 - node@12
 - youtube-dl
 - composer
