@@ -100,9 +100,12 @@ brew install \
     maven \
     ffmpeg \
     python \
-    node \
     youtube-dl \
     composer
+
+# install @ configure node
+brew install node@12
+echo 'export PATH="/usr/local/opt/node@12/bin:$PATH"' >> ~/.zshrc
 
 brew doctor
 brew cleanup

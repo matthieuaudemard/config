@@ -36,7 +36,7 @@ just a bunch of scripts to automate new macos systems installations.
 - maven
 - ffmpeg
 - python3.x
-- node
+- node@12
 - youtube-dl
 - composer
 - angular-cli
