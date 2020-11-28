@@ -26,18 +26,18 @@ brew tap homebrew/cask-fonts
 brew tap mongodb/brew
 
 # Web browsers
-brew cask install \
+brew install --cask \
     homebrew/cask-versions/firefox-developer-edition \
     google-chrome \
 
 # Social networks & comm
-brew cask install \
+brew install --cask \
     discord \
     skype \
     whatsapp \
 
 # Develpt
-brew cask install \
+brew install --cask \
     atom \
     jetbrains-toolbox \
     intellij-idea \
@@ -48,13 +48,13 @@ brew cask install \
 apm install dracula-ui dracula-syntax atom-beautify
 
 # Security
-brew cask install \
+brew install --cask \
     1password \
     expressvpn \
     malwarebytes
 
 # Utility & others
-brew cask install \
+brew install --cask \
     appcleaner \
     battle-net \
     gimp \
