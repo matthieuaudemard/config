@@ -2,8 +2,8 @@
 # https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
 
 GIT_DIR='~/git'
-ZSH_CONFIG_FILE = '~/.zshrc'
-VIM_CONFIG_FILE = '~/.vimrc'
+ZSH_CONFIG_FILE='~/.zshrc'
+VIM_CONFIG_FILE='~/.vimrc'
 
 xcode-select —-install
 
@@ -76,10 +76,10 @@ mkdir $GIT_DIR
 git clone https://github.com/dracula/vim.git `$GIT_DIR/dracula-vim`
 mkdir -p ~/.vim/pack/themes/start
 ln -s `$GIT_DIR/dracula-vim` ~/.vim/pack/themes/start/dracula
-touch ~/.vimrc
-echo 'packadd! dracula' >> ~/.vimrc
-echo 'syntax enable' >> ~/.vimrc
-echo 'colorscheme dracula' >> ~/.vimrc
+touch $VIM_CONFIG_FILE
+echo 'packadd! dracula' >> $VIM_CONFIG_FILE
+echo 'syntax enable' >> $VIM_CONFIG_FILE
+echo 'colorscheme dracula' >> $VIM_CONFIG_FILE
 
 
 # install & configure java11
