@@ -1,9 +1,9 @@
 # link for configuring zsh :
 # https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
-
-GIT_DIR='~/git'
-ZSH_CONFIG_FILE='~/.zshrc'
-VIM_CONFIG_FILE='~/.vimrc'
+GIT_DIR="$HOME/git"
+ZSH_CONFIG_FILE="$HOME/.zshrc"
+VIM_CONFIG_FILE="$HOME/.vimrc"
+OMZ_HOME="$HOME/.oh-my-zsh"
 
 xcode-select —-install
 
@@ -12,10 +12,12 @@ xcode-select —-install
 brew update
 
 # install & update zsh
-brew install zsh \
-&& omz update \
-&& echo 'export HOMEBREW_NO_AUTO_UPDATE=1' >> $ZSH_CONFIG_FILE \
-&& echo 'export PATH="/usr/local/sbin:$PATH"' >> $ZSH_CONFIG_FILE
+brew install zsh
+omz update
+echo 'export HOMEBREW_NO_AUTO_UPDATE=1' >> $ZSH_CONFIG_FILE
+echo 'export PATH="/usr/local/sbin:$PATH"' >> $ZSH_CONFIG_FILE
+git clone https://github.com/bhilburn/powerlevel9k.git $OMZ_HOME/custom/themes/powerlevel9k
+echo ZSH_THEME="powerlevel9k/powerlevel9k" >> $ZSH_CONFIG_FILE
 
 # install git & edit gitconfig
 brew install git \
@@ -24,6 +26,8 @@ git config --global user.name "Matthieu Audemard"
 git config --global user.email "matthieu.audemard@gmail.com"
 git config --global core.editor vim
 git config --global credential.helper osxkeychain
+
+brew install wget
 
 # add brew repos
 brew tap homebrew/cask-fonts
@@ -70,8 +74,8 @@ brew install --cask \
     notion
 
 # install & configure vim
-brew install vim \
-&& echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> $ZSH_CONFIG_FILE
+brew install vim
+echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> $ZSH_CONFIG_FILE
 mkdir $GIT_DIR
 git clone https://github.com/dracula/vim.git `$GIT_DIR/dracula-vim`
 mkdir -p ~/.vim/pack/themes/start
